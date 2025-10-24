@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoyorGirl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f8ff;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Boy👦🏻💙 or Girl👧🏻🩷？</h1>
+    <p id="message">クリックしてみて！</p> <!-- メッセージ用の段落を追加 -->
+
+    <button class="button" onclick="revealGender()">Click me!</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function revealGender() {
+            // 最初のメッセージを変更
+            document.getElementById('message').textContent = "🐘ついてた😂💙"; // クリック後のメッセージ
+
+            // 結果を「Boy」で固定
+            const gender = '💙Boy💙';
+
+            // 結果を画面に表示
+            document.getElementById('result').textContent = gender;
+            
+            // 背景色を変更（「Boy」の場合）
+            document.body.style.backgroundColor = '#a2dff7'; // 男の子は青
+        }
+    </script>
+
+</body>
+</html>
